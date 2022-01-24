@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30611.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ICR-Omni+Service", "WebApplication1\ICR-Omni+Service.csproj", "{DB520291-DCDB-4E45-936B-AEA36315BB39}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DB520291-DCDB-4E45-936B-AEA36315BB39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB520291-DCDB-4E45-936B-AEA36315BB39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB520291-DCDB-4E45-936B-AEA36315BB39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB520291-DCDB-4E45-936B-AEA36315BB39}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {45267380-597F-484F-910C-E1D486C2C03A}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Agents Time Custom Report</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/angular.min.js"></script>
+</head>
+<body ng-app="fApp" ng-controller="fControler">
+
+
+
+
+
+
+
+    <div style="margin-left:20px;">
+        <h2>CONTACTS AGENT TIMING</h2>
+        <div class="row">
+
+            <div class="col-md-12">
+                <h3>PER AGENT</h3>
+                <div class="col-md-12" style="text-align: right;"><button ng-click="tocsv()" type="button">DOWNLOAD <img src="img/excel.svg" width="15px" height="15px"></button></div>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Agent</th>
+                            <th>Contacts</th>
+                            <th>CA</th>
+                            <th>CA/Hr</th>
+                            <th>CNA</th>
+                            <th>CNA>60</th>
+                            <th>Rep</th>
+                            <th>Rep>60</th>
+                            <th>Recup</th>
+                            <th>En Cours</th>
+                            <th>Positif</th>
+                            <th>CallBacks</th>
+                            <th>Session</th>
+                            <th>DMT</th>
+                            <th>Breaks</th>
+                            <th>Available</th>
+                            <th>Preview</th>
+                            <th>Talk Time</th>
+                            <th>Wrapup Time</th>
+                            <th>Occup %</th>
+                            <th>Concret %</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="x in report">
+                            <td>{{x.agent}}</td>
+                            <td>{{x.contacts}}</td>
+                            <td>{{x.ca}}</td>
+                            <td>{{x.cah}}</td>
+                            <td>{{x.cna}}</td>
+                            <td>{{x.cna60}}</td>
+                            <td>{{x.repondeur}}</td>
+                            <td>{{x.rep60}}</td>
+                            <td>{{x.recuperation}}</td>
+                            <td>{{x.encours}}</td>
+                            <td>{{x.positif}}</td>
+                            <td>{{x.callbaks}}</td>
+                            <td>{{x.session}}</td>
+                            <td>{{x.average}}</td>
+                            <td>{{x.breaks}}</td>
+                            <td>{{x.available}}</td>
+                            <td>{{x.preview}}</td>
+                            <td>{{x.talktime}}</td>
+                            <td>{{x.wrapup}}</td>
+                            <td>{{x.occup}}</td>
+                            <td>{{x.concret}}</td>
+                        </tr>
+
+                    </tbody>
+                    <tfooter>
+                        <tr>
+                            <th>TOTAL</th>
+                            <th>{{ contacts() }}</th>
+                            <th>{{ ca() }}</th>
+                            <th>{{ cah() }}</th>
+                            <th>{{ cna() }}</th>
+                            <th>{{ cna60() }}</th>
+                            <th>{{ respondeur() }}</th>
+                            <th>{{ resp60() }}</th>
+                            <th>{{ recuperation() }}</th>
+                            <th>{{ encours() }}</th>
+                            <th>{{ positives() }}</th>
+                            <th>{{ callbacks() }}</th>
+                            <th>{{ _session() }}</th>
+                            <th>{{ _average() }}</th>
+                            <th>{{ _breaks() }}</th>
+                            <th>{{ _available() }}</th>
+                            <th>{{ _preview() }}</th>
+                            <th>{{ _talktime() }}</th>
+                            <th>{{ _wrapup() }}</th>
+                            <th>{{ _occup() }}</th>
+                            <th>{{ _concret() }}</th>
+                        </tr>
+                    </tfooter>
+                </table>
+            </div>
+        </div>
+
+
+    </div>
+    <script src="js/script.js"></script>
+    <script src="js/xlsx.full.min.js"></script>
+</body>
+</html>
